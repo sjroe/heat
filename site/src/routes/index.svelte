@@ -6,7 +6,7 @@
 	let dx = 1;
 	let y0 = 0;
 	let dy = 1;
-	let numberOfColours = 10;
+	let numberOfColours = 100;
 	let reverse = false;
 	const dataHeight = 30;
 	const dataWidth = 30;
