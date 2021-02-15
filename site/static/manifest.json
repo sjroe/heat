@@ -1,9 +1,9 @@
 {
-	"short_name": "Sapper + PostCSS",
-	"name": "Sapper with PostCSS project base",
-	"description": "A template that includes Svelte with Sapper and PostCSS preprocessing with Tailwind CSS",
-	"categories": ["personalization", "productivity"],
-	"lang": "en-US",
+	"short_name": "Heat",
+	"name": "Svelte Heat",
+	"description": "Performant heatmap component for Svelte",
+	"categories": ["svelte", "charts", "heatmap", "dataviz"],
+	"lang": "en-GB",
 	"dir": "ltr",
 	"icons": [
 		{
