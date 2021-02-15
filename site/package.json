@@ -6,7 +6,9 @@
     "dev": "sapper dev",
     "build": "cross-env NODE_ENV=production sapper build --legacy",
     "export": "cross-env NODE_ENV=production sapper export --legacy",
-    "start": "node __sapper__/build"
+    "start": "node __sapper__/build",
+		"build:lib": "cd .. && npm install && npm run build",
+		"deploy": "npm run build:lib && npm run export"
   },
   "dependencies": {
     "compression": "^1.7.4",
