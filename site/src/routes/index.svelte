@@ -35,7 +35,7 @@
 	</p>
 
 	<div class="chart">
-		<Heat {...{ zsmooth, x0, dx, y0, dy, data, colours: selected.id, numberOfColours, reverse }} />
+		<Heat {...{ zsmooth, x0, dx, y0, dy, data, colours: selected.id, numberOfColours, reverse, xTicks: 5 }} />
 	</div>
 
 	<h2>Options</h2>
