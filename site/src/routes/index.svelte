@@ -29,6 +29,7 @@
 </script>
 
 <div class="main">
+	<a href="https://github.com/sjroe/heat">GitHub</a>
 	<h1>Performant Heatmap for Svelte</h1>
 	<p>
 		Use the left mouse button to draw a zoom rectangle. Middle click to reset the zoom. Panning and touch are not currently supported.
