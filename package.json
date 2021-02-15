@@ -28,7 +28,9 @@
     "build": "tsc -b && node ./scripts/preprocess.js",
     "dev": "nodemon -e svelte,ts -w src --exec 'npm run build'",
     "validate": "svelte-check --ignore dist",
-    "lint": "eslint src"
+    "lint": "eslint src",
+		"install:site": "yarn --cwd site install",
+		"deploy": "npm run build && cd site && npm run export"
   },
   "dependencies": {
     "@types/d3-scale-chromatic": "^2.0.0",
