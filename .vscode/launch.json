@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "stable"
+        },
+        {
+            "name": "Launch Program",
+            "request": "launch",
+            "type": "node",
+            "program": "${workspaceFolder}/node_modules/sapper/dist/cli.js",
+            "args": [ "dev" ],
+            "autoAttachChildProcesses": true
+        }
+    ]
+}
