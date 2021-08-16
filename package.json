@@ -2,12 +2,6 @@
 	"name": "@sjroe/heat",
 	"version": "2021.02.13",
 	"description": "Performant heat map for Svelte",
-	"module": "dist/index.js",
-	"svelte": "dist/index.js",
-	"types": "dist/index.t.d",
-	"files": [
-		"dist"
-	],
 	"keywords": [
 		"svelte",
 		"charts",
@@ -25,33 +19,36 @@
 	"license": "MIT",
 	"author": "Stephen Roe",
 	"scripts": {
-		"build": "tsc -b && node ./scripts/preprocess.js",
-		"dev": "nodemon -e svelte,ts -w src --exec 'npm run build'",
-		"validate": "svelte-check --ignore dist",
-		"lint": "eslint src"
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --ignore-path .gitignore  --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
 	},
 	"dependencies": {
-		"@types/d3-scale-chromatic": "^2.0.0",
+		"@types/d3-scale-chromatic": "^2.0.1",
 		"d3-scale-chromatic": "^2.0.0"
 	},
 	"devDependencies": {
-		"@tsconfig/svelte": "^1.0.10",
-		"@typescript-eslint/eslint-plugin": "^4.14.0",
-		"@typescript-eslint/parser": "^4.14.0",
-		"chokidar": "^3.5.1",
-		"eslint": "^7.15.0",
-		"eslint-config-airbnb-base": "^14.2.1",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-promise": "^4.2.1",
-		"eslint-plugin-svelte3": "^3.0.0",
-		"nodemon": "^2.0.7",
-		"postcss": "^8.2.1",
-		"postcss-load-config": "^3.0.1",
+		"@sveltejs/kit": "next",
+		"@typescript-eslint/eslint-plugin": "^4.29.2",
+		"@typescript-eslint/parser": "^4.29.2",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.24.0",
+		"eslint-plugin-promise": "^4.3.1",
+		"eslint-plugin-svelte3": "^3.2.0",
+		"postcss": "^8.3.6",
+		"postcss-load-config": "^3.1.0",
 		"postcss-preset-env": "^6.7.0",
-		"svelte": "^3.31.0",
-		"svelte-check": "^1.1.34",
-		"svelte-preprocess": "^4.6.1",
-		"tslib": "^2.1.0",
-		"typescript": "^4.1.5"
-	}
+		"prettier": "^2.3.2",
+		"svelte": "^3.42.1",
+		"svelte-check": "^1.6.0",
+		"svelte-preprocess": "^4.7.4",
+		"tslib": "^2.3.1",
+		"typescript": "^4.3.5"
+	},
+	"type": "module"
 }

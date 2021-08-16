@@ -1,8 +1,5 @@
-._*
 .DS_Store
-/.history/
-/node_modules/
-/dist
-/site/__sapper__
-/site/node_modules
-/site/src/node_modules
+node_modules
+/build
+/.svelte-kit
+/package

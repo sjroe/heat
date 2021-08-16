@@ -9,7 +9,7 @@ const e2 = Math.sqrt(2);
 function increment(start: number, stop: number, count: number): number {
 	const step = (stop - start) / Math.max(0, count);
 	const power = Math.floor(Math.log(step) / Math.LN10);
-	const error = step / (10 ** power);
+	const error = step / 10 ** power;
 
 	let base = 1;
 	if (error >= e10) {
@@ -20,9 +20,7 @@ function increment(start: number, stop: number, count: number): number {
 		base = 2;
 	}
 
-	return power >= 0
-		? base * (10 ** power)
-		: -(10 ** -power) / base;
+	return power >= 0 ? base * 10 ** power : -(10 ** -power) / base;
 }
 
 export function getTicks(start: number, stop: number, count = 5): number[] {

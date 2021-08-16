@@ -1,17 +1,18 @@
-const sveltePreprocess = require("svelte-preprocess");
+import preprocess from 'svelte-preprocess';
 
-const createPreprocessors = ({ sourceMap }) => [
-	sveltePreprocess({
-		sourceMap,
-		defaults: {
-			style: "postcss",
-			script: "typescript",
-		},
-		postcss: true,
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: preprocess({
+		sourceMap: true,
+		postcss: true
 	}),
-];
 
-module.exports = {
-	createPreprocessors,
-	preprocess: createPreprocessors({ sourceMap: true }),
+	kit: {
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte'
+	}
 };
+
+export default config;

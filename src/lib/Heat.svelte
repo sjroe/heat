@@ -9,7 +9,7 @@
 - Undo stack for zoom levels
 -->
 
-<script>
+<script lang="ts">
 	import { onMount } from "svelte";
 	import * as scales from "d3-scale-chromatic";
 	import buildColourPalette from "./utils/colourPalette";
@@ -25,8 +25,8 @@
 	export let zmin = undefined;
 	export let zmax = undefined;
 	export let data: number[][];
-	export let colours: string = "Cividis";
-	export let numberOfColours: number = 10;
+	export let colours = "Cividis";
+	export let numberOfColours = 10;
 	export let reverse = false;
 
 	const colourScales = {
@@ -217,10 +217,10 @@
 		left: number;
 	}
 	const ClientToCanvas = (r: Rectangle): Rectangle => ({
-			left: Math.round(r.left / width * canvas.width),
-			top: Math.round(r.top / height * canvas.height),
-			width: Math.round(r.width / width * canvas.width),
-			height: Math.round(r.height / height * canvas.height)
+		left: Math.round(r.left / width * canvas.width),
+		top: Math.round(r.top / height * canvas.height),
+		width: Math.round(r.width / width * canvas.width),
+		height: Math.round(r.height / height * canvas.height)
 	});
 
 	const handle_mouseup = (e: MouseEvent) => {
@@ -302,7 +302,7 @@
 			bind:clientWidth={width}
 			bind:clientHeight={height}
 			on:mousedown|preventDefault={handle_mousedown}
-			on:mouseup|preventDefault={() => {}}
+			on:mouseup|preventDefault={() => true}
 			on:mouseleave={() => tooltip.enabled = false}
 			on:touchstart|preventDefault={() => console.log("start")}
 			on:touchmove={() => console.log("move")}
@@ -310,7 +310,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.outer-chart {
 		width: 100%;
 		height: 100%;

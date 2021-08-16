@@ -1,5 +1,5 @@
-<script>
-	import Heat from "@sjroe/heat/dist";
+<script lang="ts">
+	import Heat from "$lib/Heat.svelte";
 
 	let zsmooth = false;
 	let x0 = 0;
@@ -60,7 +60,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.chart {
 		min-height: 30rem;
 		height: 60vh;

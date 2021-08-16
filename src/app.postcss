@@ -6,7 +6,7 @@
 @custom-media --xxl (min-width: 1536px);
 
 :root {
-	--body-font: "Rubik", sans-serif;
+	--body-font: 'Rubik', sans-serif;
 	--heading-font: var(--body-font);
 
 	--font-size-base: 1rem;
@@ -138,14 +138,18 @@
 }
 
 :root {
-	--shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	--shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-	--shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	--shadow-4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-	--shadow-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	--shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	--shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	--shadow-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	--shadow-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	--shadow-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 
 :root {
 	tab-size: 4;
@@ -158,29 +162,52 @@ body {
 	margin: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
 	font-family: var(--heading-font);
 	line-height: 1.3;
 }
 
-.h1, h1 { font-size: var(--heading-1); }
-.h2, h2 { font-size: var(--heading-2); }
-.h3, h3 { font-size: var(--heading-3); }
-.h4, h4 { font-size: var(--heading-4); }
-.h5, h5 { font-size: var(--heading-5); }
+.h1,
+h1 {
+	font-size: var(--heading-1);
+}
+.h2,
+h2 {
+	font-size: var(--heading-2);
+}
+.h3,
+h3 {
+	font-size: var(--heading-3);
+}
+.h4,
+h4 {
+	font-size: var(--heading-4);
+}
+.h5,
+h5 {
+	font-size: var(--heading-5);
+}
 
-button, input, optgroup, select, textarea {
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0;
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	margin: 0;
 }
 
 button {
-  background-color: transparent;
-  background-image: none;
+	background-color: transparent;
+	background-image: none;
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+	color: inherit;
+	text-decoration: inherit;
 }
