@@ -1,0 +1,9 @@
+name = "heat"
+type = 'webpack'
+account_id = '617cf617a3f3068574ab282a0d2c8f4'
+route = 'https://heat.sjroe.dev/*'
+zone_id = 'c50dc383e95be8a0fbb286ad86083799'
+usage_model = ''
+workers_dev = true
+target_type = "webpack"
+site = {bucket = "./build",entry-point = "workers-site"}
